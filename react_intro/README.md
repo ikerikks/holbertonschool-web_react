@@ -1,1 +1,1 @@
-# React intro
+# React js intro
