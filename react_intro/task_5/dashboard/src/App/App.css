@@ -1,0 +1,37 @@
+.App {
+  /* text-align: center; */
+  font-family: 'Poppins';
+}
+
+.App-logo {
+  /* height: 40vmin; */
+  pointer-events: none;
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  color: #E0354B;
+}
+
+.App-logo {
+  height: 300px;
+}
+
+.App-body {
+  border: solid #E0354B;
+  border-left: none;
+  border-right: none;
+  padding: 35px 0px 0px 65px;
+  height: 50vh;
+}
+
+.App-footer {
+  font-style: italic;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+}
