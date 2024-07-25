@@ -1,25 +1,46 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require('path');
 
 module.exports = {
-  entry: {
-    main: path.resolve(__dirname, './src/index.js'),
-  },
+  mode: 'development',
+  entry: './src/index.js',
+  devtool: 'inline-source-map',
   output: {
+    path: path.resolve(__dirname, '../dist'),
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
   },
-
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: "Webpack Output",
-    }),
-  ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        use: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+          },
+        ],
+      },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+          },
+        }
+      },
+    ],
+  },
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    static: {
+      directory: path.join(__dirname, '../dist')
+    },
     compress: true,
-    port: 9000,
-    hot: true
+    open: true,
+    hot: true,
   },
 };
-
