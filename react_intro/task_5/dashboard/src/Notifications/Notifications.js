@@ -1,8 +1,8 @@
 import React from 'react';
 import './Notifications.css';
-import { getLatestNotification } from './utils'
+import { getLatestNotification } from '../utils/utils';
 
-export function Notifications() {
+export default function Notifications() {
   return (
     <div className="Notifications">
       <div className="notif-header">

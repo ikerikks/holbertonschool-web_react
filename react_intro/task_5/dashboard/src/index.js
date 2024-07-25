@@ -1,14 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import App from './App/App';
 import Notifications from './Notifications/Notifications';
 
-ReactDOM.render(
-  <div>
-	<div className="root-notifications">
-      <Notifications />
-	</div>
-    <App />
-  </div>,
-  document.getElementById('root')
-);
+const root = createRoot(document.getElementById("root"))
+root.render
+  (
+    <div>
+      <div className="root-notifications">
+        <Notifications />
+      </div>
+      <App />
+    </div>
+  )

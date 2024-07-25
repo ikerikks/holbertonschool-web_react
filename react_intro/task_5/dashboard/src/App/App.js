@@ -1,4 +1,5 @@
-import logo from './images/hlb_logo.jpg';
+import React from 'react';
+import logo from '../assets/holberton-logo.jpg';
 import './App.css';
 
 function App() {
