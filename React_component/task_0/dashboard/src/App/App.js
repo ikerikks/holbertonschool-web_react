@@ -20,7 +20,7 @@ export default class App extends React.Component {
   render() {
     return (
       <>
-        <Notifications displayDrawer={true}
+        <Notifications
           listNotifications = {
             [
               {id: 1, type: 'default', value: 'New course available'},
