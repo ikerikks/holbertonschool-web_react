@@ -1,0 +1,15 @@
+.App {
+  font-family: 'Poppins';
+}
+
+.App-body {
+  border: solid #E0354B;
+  border-left: none;
+  border-right: none;
+  padding: 35px;
+  height: 50vh;
+  display: flex; 
+  justify-content: center;
+  align-items: flex-start;
+
+}
