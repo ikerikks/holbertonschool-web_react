@@ -1,0 +1,34 @@
+.menuItem {
+  text-align: right;
+  padding-right: 35px;
+  font-size: 1.2rem;
+  padding-bottom: 10px;
+}
+
+.Notifications {
+  border: dashed #E0354B;
+  padding: 0px 15px 15px;
+  width: 458px;
+  position: absolute;
+  right: 35px;
+  font-size: 1.2rem;
+
+}
+
+.notif-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.notif-header p {
+  margin: 25px 0px 0px;
+}
+
+[data-notification-type="default"] {
+  color: #0000ff;
+}
+
+[data-notification-type="urgent"] {
+  color: #f50021;
+}

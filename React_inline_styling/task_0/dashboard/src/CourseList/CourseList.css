@@ -1,0 +1,8 @@
+.CourseList {
+  width: 70%;
+  border: solid .7px gray;
+}
+
+.CourseList th {
+  border-bottom: solid 2px gray;
+}
