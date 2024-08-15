@@ -1,7 +1,6 @@
 const path = require('path');
-const HtmlWebpackPluging = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-
 
 module.exports = {
   mode: 'development',
@@ -12,6 +11,7 @@ module.exports = {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'public')
   },
+  devtool: 'inline-source-map',  // Add this line to set devtool to inline-source-map
   module: {
     rules: [
       {
@@ -34,10 +34,10 @@ module.exports = {
     port: 8564
   },
   plugins: [
-    new HtmlWebpackPluging({
+    new HtmlWebpackPlugin({  // Corrected typo in plugin name
       filename: 'index.html',
       chunks: ['header', 'body', 'footer']
     }),
     new CleanWebpackPlugin()
   ]
-}
+};
